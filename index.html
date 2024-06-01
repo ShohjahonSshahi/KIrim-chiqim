@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Financial Dashboard</h1>
+  <div class="date-inputs">
+    <input type="date" id="startDate" value="2024-01-01">
+    <input type="date" id="endDate" value="2024-12-31">
+    <button onclick="loadData()">Load Data</button>
+  </div>
+  <div class="card" id="totalIncome">Total Income: Loading...</div>
+  <div class="card" id="totalExpense">Total Expense: Loading...</div>
+  <div class="card" id="profit">Profit: Loading...</div>
+  <div class="chart-container">
+    <div class="chart-card">
+        <h1> Income chart</h1>
+      <canvas id="incomeChart"></canvas>
+      <div class="category-sum" id="incomeSums"></div>
+    </div>
+    <div class="chart-card">
+        <h1> Expense chart</h1>
+      <canvas id="expenseChart"></canvas>
+      <div class="category-sum" id="expenseSums"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
